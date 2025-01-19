@@ -1,0 +1,159 @@
+/* Global body styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    background-color: #2d625e;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Keep the header above other content */
+    text-decoration: none;
+}
+
+
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #4ca9a3;
+    height: 100vh;
+    padding: 20px;
+    position: fixed; /* Membuat sidebar tetap berada di posisi tetap */
+    top: 60px;
+    left: 0; /* Sidebar selalu tampil di kiri */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 99;
+}
+
+.sidebar .user-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .user-image {
+    width: 80px;
+    height: 80px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.sidebar .user-section h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.sidebar .menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar .menu li {
+    margin-bottom: 15px;
+}
+
+.sidebar .menu a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar .menu a:hover {
+    background-color: #3b8c84;
+}
+
+/* Main Content Area */
+.main {
+    margin-left: 270px; /* Membuat ruang untuk sidebar */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header untuk konten utama */
+.main h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #4ca9a3;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+/* Gambar */
+.main img {
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Title */
+.main .section-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    border-left: 5px solid #4ca9a3;
+    padding-left: 10px;
+}
+
+/* Jadwal Kuliah / Schedule Styling */
+.main .schedule {
+    background-color: #4ca9a3;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Link Buttons Section */
+.main .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.main .links a {
+    background-color: #326ff3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.main .links a:hover {
+    background-color: #285bb5;
+}
+
+
+
+

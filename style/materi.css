@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+/* Header */
+.header {
+    background-color: #2d625e;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Keep the header above other content */
+    text-decoration: none;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #4ca9a3;
+    height: 100vh;
+    padding: 20px;
+    position: fixed; /* Membuat sidebar tetap berada di posisi tetap */
+    top: 60px;
+    left: 0; /* Sidebar selalu tampil di kiri */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 99;
+}
+
+.sidebar .user-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .user-image {
+    width: 80px;
+    height: 80px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+}
+
+.sidebar .user-section h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.sidebar .menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar .menu li {
+    margin-bottom: 15px;
+}
+
+.sidebar .menu a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar .menu a:hover {
+    background-color: #3b8c84;
+}
+
+.main {
+    margin-left: 270px;
+    padding: 20px;
+}
+.main h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #287a75;
+    text-align: right; /* Menempatkan teks di sisi kanan */
+    border: 2px solid #4ca9a3; /* Membuat border kotak */
+    padding: 10px 20px; /* Memberi ruang di dalam border */
+    display: inline-block; /* Agar ukuran border mengikuti teks */
+    border-radius: 5px; /* Membuat sudut border sedikit melengkung */
+    background-color: #f5f5f5; /* Warna latar belakang border */
+}
+.tab-button {
+    display: block;
+    margin: 20px auto; /* Center the button */
+    background-color: #e3e9ff;
+    color: #6477db;
+    border: none;
+    padding: 15px 150px; /* Make the button longer */
+    border-radius: 25px; /* Rounded edges */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+.tab-button:hover {
+    background-color: #ddd;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table th,
+table td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px;
+}
+table th {
+    background-color: #4ca9a3;
+    color: white;
+    font-size: 14px;
+}
+table td {
+    font-size: 18px;
+}
+.action-link {
+    background-color: #326ff3;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 38%;
+    text-align: center;
+    text-decoration: none;
+}
+.action-link:hover {
+    background-color: #285bb5;
+}
+

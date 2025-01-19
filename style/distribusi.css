@@ -1,0 +1,252 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+.header {
+    background-color: #2d625e;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Keep the header above other content */
+    text-decoration: none;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #4ca9a3;
+    height: 100vh;
+    padding: 20px;
+    position: fixed; /* Membuat sidebar tetap berada di posisi tetap */
+    top: 60px;
+    left: 0; /* Sidebar selalu tampil di kiri */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 99;
+}
+
+.sidebar .user-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar .user-section h3 {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.sidebar .menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar .menu li {
+    margin-bottom: 15px;
+}
+
+.sidebar .menu a {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar .menu a:hover {
+    background-color: #3b8c84;
+}
+
+.main {
+    margin-left: 270px;
+    padding: 20px;
+}
+
+/* Header untuk konten utama */
+.main h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #4ca9a3;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.upload-area {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.upload-area:hover {
+    border-color: #4ca9a3;
+}
+.progress-bar {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+.progress-bar div {
+    height: 20px;
+    background-color: #4ca9a3;
+    width: 0%;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+    font-size: 12px;
+}
+
+.upload-container {
+    display: flex; /* Aktifkan Flexbox */
+    justify-content: center; /* Rata tengah horizontal */
+    align-items: center; /* Rata tengah vertikal */
+    margin-top: 10px; /* Tambahkan jarak atas jika diperlukan */
+    height: 40px; /* Tinggi area container */
+}
+.upload-button {
+    background-color: #4ca9a3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+.upload-button:hover {
+    background-color: #3b8c84;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+table th,
+table td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px;
+}
+table th {
+    background-color: #4ca9a3;
+    color: white;
+}
+table td {
+    font-size: 14px;
+}
+.action-link {
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+}
+.action-link.open {
+    background-color: #007bff;
+}
+.action-link.download {
+    background-color: #28a745;
+}
+.action-link.delete {
+    background-color: #dc3545;
+}
+.chat-button {
+    background-color: #4ca9a3;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Chat Popup Styles */
+.chat-popup {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background-color: #f9f9f9;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s ease-in-out;
+}
+.chat-popup.open {
+    right: 0;
+}
+.chat-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    background-color: #4ca9a3;
+    color: white;
+    font-size: 16px;
+}
+.chat-header button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.chat-content {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+}
+.chat-message {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+.chat-message .username {
+    font-weight: bold;
+    font-size: 14px;
+    color: #4ca9a3;
+}
+.chat-message .time {
+    font-size: 12px;
+    color: #999;
+}
+.chat-input-section {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+}
+.chat-input-section input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.chat-input-section button {
+    background-color: #4ca9a3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
